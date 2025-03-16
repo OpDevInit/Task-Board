@@ -1,9 +1,9 @@
 package com.opdevinit.todo_list;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.opdevinit.todo_list.persistense.migration.MigrationStrategy;
+import com.opdevinit.todo_list.ui.MainMenu;
 
 import liquibase.exception.LiquibaseException;
 
@@ -21,6 +21,8 @@ public class TodoListApplication {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		new MainMenu().execute();
 
 	}
 
